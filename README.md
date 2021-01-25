@@ -13,6 +13,8 @@
     <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg"></a>
 </p>
 
+***
+
 ## Installation
 ### Method 1: Using Pre-compiled Binaries
 The pre-compiled binaries for different systems are available in the [**Releases**](https://github.com/TheBinitGhimire/NtHiM/releases) page. You can download the one suitable for your system, unzip the file and start using NtHiM.
@@ -25,6 +27,8 @@ If you have Cargo installed, you can simply follow the steps below:
 3. Use the `cargo build` command,
 4. Go inside the newly-created **target** folder, and open the **debug** folder inside it, `cd target/debug`;
 5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on Linux).
+
+***
 
 ## Usage
 ### Use Case 1 (Single Target):
@@ -39,9 +43,23 @@ NtHiM -t https://example.example.com
 NtHiM -f hostnames.txt
 ```
 
+***
+
+| Flag  | Description                         | Example                                  |
+| ----- | ----------------------------------- | ---------------------------------------- |
+|  -h   | Display help related to usage!      | NtHiM -h                                 |
+|  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
+|  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
+|  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
+|   -V  | Display the version information!    | NtHiM -V                                 |
+
+***
+
 ## Examples
 ### Single Target
 ![Single Target](src/example1.png)
 
 ### Multiple Targets using Concurrent Threads
 ![Multiple Targets using Concurrent Threads](src/example2.png)
+
+***
