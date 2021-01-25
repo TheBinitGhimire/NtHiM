@@ -1,0 +1,18 @@
+[package]
+name = "NtHiM"
+version = "0.0.1"
+authors = ["Binit Ghimire <thebinitghimire@gmail.com>"]
+edition = "2018"
+description = "Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ansi_term = ""
+clap = "3.0.0-beta.2"
+futures = ""
+reqwest = "0.10.0"
+serde = ""
+serde_derive = ""
+serde_json = ""
+tokio = { version = "0.2", features = ["full"] }
