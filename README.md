@@ -13,3 +13,35 @@
     <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg"></a>
 </p>
 
+## Installation
+### Method 1: Using Pre-compiled Binaries
+The pre-compiled binaries for different systems are available in the [**Releases**](https://github.com/TheBinitGhimire/NtHiM/releases) page. You can download the one suitable for your system, unzip the file and start using NtHiM.
+
+### Method 2: Manual Build
+You will need Cargo to perform the manual build for NtHiM.
+If you have Cargo installed, you can simply follow the steps below:
+1. Clone this repository, `git clone https://github.com/TheBinitGhimire/NtHiM`;
+2. Go inside the folder, `cd NtHiM`;
+3. Use the `cargo build` command,
+4. Go inside the newly-created **target** folder, and open the **debug** folder inside it, `cd target/debug`;
+5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on Linux).
+
+## Usage
+### Use Case 1 (Single Target):
+
+```bash
+NtHiM -t https://example.example.com
+```
+
+### Use Case 2 (Multiple Targets):
+
+```bash
+NtHiM -f hostnames.txt
+```
+
+## Examples
+### Single Target
+![Single Target](src/example1.png)
+
+### Multiple Targets using Concurrent Threads
+![Multiple Targets using Concurrent Threads](src/example2.png)
