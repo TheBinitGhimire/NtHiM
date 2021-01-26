@@ -63,3 +63,20 @@ NtHiM -f hostnames.txt
 ![Multiple Targets using Concurrent Threads](src/example2.png)
 
 ***
+
+## Workflow
+
+### Platform Identification
+**NtHiM** uses the data provided in **[EdOverflow/can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz)** for the platform identification.
+
+***
+
+## Contributions and Feature Requests
+<p align="center">
+    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
+</p>
+
+If you are interested in contributing in the development of <strong>NtHiM</strong>, you can feel free to create a <strong>Pull Request</strong> with modifications in the original code, or you shall open up a new <strong>issue</strong>, and I will try to include the feature as requested.
+
+There is no restriction on anyone for contributing to the development of <strong>NtHiM</strong>. If you would like to contribute, you can feel free to do so.
+

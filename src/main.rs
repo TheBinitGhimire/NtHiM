@@ -12,7 +12,7 @@ use std::io::{BufRead, BufReader};
 
 fn main() -> std::io::Result<()> {
 	let args = App::new("NtHiM")
-			.version("0.0.1")
+			.version("0.0.2")
 			.author("Binit Ghimire <binit@WHOISbinit.me>")
 			.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
 			.args(&[
