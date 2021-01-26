@@ -17,10 +17,18 @@
 ***
 
 ## Installation
+
 ### Method 1: Using Pre-compiled Binaries
 The pre-compiled binaries for different systems are available in the [**Releases**](https://github.com/TheBinitGhimire/NtHiM/releases) page. You can download the one suitable for your system, unzip the file and start using NtHiM.
 
-### Method 2: Manual Build
+### Method 2: Using Crates.io
+**NtHiM** is available on **[Crates.io](https://crates.io/crates/NtHiM)**. So, if you have Rust installed on your system, you can simply install **NtHiM** with the following command:
+
+```bash
+cargo install NtHiM
+```
+
+### Method 3: Manual Build
 You will need Cargo to perform the manual build for NtHiM.
 If you have Cargo installed, you can simply follow the steps below:
 1. Clone this repository, `git clone https://github.com/TheBinitGhimire/NtHiM`;
