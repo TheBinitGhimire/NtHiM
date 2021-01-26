@@ -10,7 +10,7 @@ homepage = "https://whoisbinit.me/NtHiM/"
 documentation = "https://whoisbinit.me/NtHiM/"
 repository = "https://github.com/TheBinitGhimire/NtHiM/"
 readme = "README.md"
-keywords = ["host-takeover", "subdomain-takeover", "domain-takeover", "subdomain-takeovers", "dangling-dns", "penetration-testing", "pentesting", "pentest", "bug-bounty", "bug-bounties"]
+keywords = ["host-takeover", "subdomain-takeover", "pentesting", "bug-bounty", "red-teaming"]
 exclude = [".git/*", "target/*", "docs/*", "_config.yml"]
 
 
