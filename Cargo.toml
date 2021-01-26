@@ -11,17 +11,17 @@ documentation = "https://whoisbinit.me/NtHiM/"
 repository = "https://github.com/TheBinitGhimire/NtHiM/"
 readme = "README.md"
 keywords = ["host-takeover", "subdomain-takeover", "pentesting", "bug-bounty", "red-teaming"]
-exclude = [".git/*", "target/*", "docs/*", "_config.yml"]
+exclude = [".git/*", "docs/*", "_config.yml"]
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ansi_term = ""
+ansi_term = "0.12.1"
 clap = "3.0.0-beta.2"
-futures = ""
+futures = "0.3.12"
 reqwest = "0.10.0"
-serde = ""
-serde_derive = ""
-serde_json = ""
+serde = "1.0.122"
+serde_derive = "1.0.122"
+serde_json = "1.0.61"
 tokio = { version = "0.2", features = ["full"] }
