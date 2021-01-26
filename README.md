@@ -5,12 +5,12 @@
     <strong>Powered by BINIT GHIMIRE (<a href='https://twitter.com/WHOISbinit' target="_blank">@WHOISbinit</a>)</strong>
 </h4>
 <p align="center">
-    <img src="src/screenshot.png">
+    <img src="src/screenshot.png" />
 </p>
 <h3 align="center"><strong>N<strong>ow, <strong>t</strong>he <strong>H</strong>ost <strong>i</strong>s <strong>M</strong>ine!</h3><hr/>
 <h2 align="center">Super Fast Sub-domain Takeover Detection!</h2>
 <p align="center">
-    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg"></a>
+    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" /></a>
 </p>
 
 
@@ -82,7 +82,7 @@ NtHiM -f hostnames.txt
 
 ## Contributions and Feature Requests
 <p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
 </p>
 
 
