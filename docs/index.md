@@ -1,92 +1,83 @@
-<h1 align="center" style="font-size:36px;font-weight:bold;">
-        NtHiM
-</h1>
-<h4 align="center">
-    <strong>Powered by BINIT GHIMIRE (<a href='https://twitter.com/WHOISbinit' target="_blank">@WHOISbinit</a>)</strong>
-</h4>
-<p align="center">
-    <img src="src/screenshot.png" />
-</p>
-<h3 align="center"><strong>N<strong>ow, <strong>t</strong>he <strong>H</strong>ost <strong>i</strong>s <strong>M</strong>ine!</h3><hr/>
+<h1 align="center" style="font-size:36px;font-weight:bold;"> NtHiM</h1>
+<h4 align="center"> <strong>Powered by BINIT GHIMIRE (<a href='https://twitter.com/WHOISbinit' target="_blank">@WHOISbinit</a>)</strong></h4>
+<p align="center"> <img src="../src/screenshot.png"/></p>
+<h3 align="center"><strong>N<strong>ow, <strong>t</strong>he <strong>H</strong>ost <strong>i</strong>s <strong>M</strong>ine!</h3>
+<hr/>
 <h2 align="center">Super Fast Sub-domain Takeover Detection!</h2>
-<p align="center">
-    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" /></a>
-</p>
-
-
-***
-
-## Installation
-### Method 1: Using Pre-compiled Binaries
-The pre-compiled binaries for different systems are available in the [**Releases**](https://github.com/TheBinitGhimire/NtHiM/releases) page. You can download the one suitable for your system, unzip the file and start using NtHiM.
-
-### Method 2: Manual Build
-You will need Cargo to perform the manual build for NtHiM.
-If you have Cargo installed, you can simply follow the steps below:
-1. Clone this repository, `git clone https://github.com/TheBinitGhimire/NtHiM`;
-2. Go inside the folder, `cd NtHiM`;
-3. Use the `cargo build` command,
-4. Go inside the newly-created **target** folder, and open the **debug** folder inside it, `cd target/debug`;
-5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on Linux).
-
-***
-
-## Usage
-
-| Flag  | Description                         | Example                                  |
-| ----- | ----------------------------------- | ---------------------------------------- |
-|  -h   | Display help related to usage!      | NtHiM -h                                 |
-|  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
-|  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
-|  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
-|   -V  | Display the version information!    | NtHiM -V                                 |
-
-***
-
-### Use Case 1 (Single Target):
-
-```bash
-NtHiM -t https://example.example.com
-```
-
-### Use Case 2 (Multiple Targets):
-
-```bash
-NtHiM -f hostnames.txt
-```
-
-***
-
-### Usage Demonstration:
-
-![NtHiM Usage Demonstration](src/demonstration.gif)
-
-***
-
-## Examples
-
-### Single Target
-![Single Target](src/example1.png)
-
-### Multiple Targets using Concurrent Threads
-![Multiple Targets using Concurrent Threads](src/example2.png)
-
-***
-
-## Workflow
-
-### Platform Identification
-**NtHiM** uses the data provided in **[EdOverflow/can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz)** for the platform identification.
-
-***
-
-## Contributions and Feature Requests
-<p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
-</p>
-
-
-If you are interested in contributing in the development of <strong>NtHiM</strong>, you can feel free to create a <strong>Pull Request</strong> with modifications in the original code, or you shall open up a new <strong>issue</strong>, and I will try to include the feature as requested.
-
-There is no restriction on anyone for contributing to the development of <strong>NtHiM</strong>. If you would like to contribute, you can feel free to do so.
-
+<p align="center"> <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg"/></a></p>
+<hr>
+<h2 id="installation">Installation</h2>
+<h3 id="method-1-using-pre-compiled-binaries">Method 1: Using Pre-compiled Binaries</h3>
+<p>The pre-compiled binaries for different systems are available in the <a href="https://github.com/TheBinitGhimire/NtHiM/releases"><strong>Releases</strong></a> page. You can download the one suitable for your system, unzip the file and start using NtHiM.</p>
+<h3 id="method-2-manual-build">Method 2: Manual Build</h3>
+<p>You will need Cargo to perform the manual build for NtHiM.If you have Cargo installed, you can simply follow the steps below:</p>
+<ol>
+   <li>Clone this repository, <code>git clone https://github.com/TheBinitGhimire/NtHiM</code>;</li>
+   <li>Go inside the folder, <code>cd NtHiM</code>;</li>
+   <li>Use the <code>cargo build</code> command,</li>
+   <li>Go inside the newly-created <strong>target</strong> folder, and open the <strong>debug</strong> folder inside it, <code>cd target/debug</code>;</li>
+   <li>You will find <strong>NtHiM.exe</strong> (on Microsoft Windows) or <strong>NtHiM</strong> binary (on Linux).</li>
+</ol>
+<hr>
+<h2 id="usage">Usage</h2>
+<table>
+   <thead>
+      <tr>
+         <th>Flag</th>
+         <th>Description</th>
+         <th>Example</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>-h</td>
+         <td>Display help related to usage!</td>
+         <td>NtHiM -h</td>
+      </tr>
+      <tr>
+         <td>-t</td>
+         <td>Scan a single target!</td>
+         <td>NtHiM -t https://example.example.com</td>
+      </tr>
+      <tr>
+         <td>-f</td>
+         <td>Scan a list of targets from a file!</td>
+         <td>NtHiM -f hostnames.txt</td>
+      </tr>
+      <tr>
+         <td>-c</td>
+         <td>Number of Concurrent Threads!</td>
+         <td>NtHiM -c 100 -f hostnames.txt</td>
+      </tr>
+      <tr>
+         <td>-V</td>
+         <td>Display the version information!</td>
+         <td>NtHiM -V</td>
+      </tr>
+   </tbody>
+</table>
+<hr>
+<h3 id="use-case-1-single-target-">Use Case 1 (Single Target):</h3>
+<pre><code class="lang-bash">NtHiM -t <span class="hljs-string">https:</span><span class="hljs-comment">//example.example.com</span>
+</code></pre>
+<h3 id="use-case-2-multiple-targets-">Use Case 2 (Multiple Targets):</h3>
+<pre><code class="lang-bash">NtHiM <span class="hljs-_">-f</span> hostnames.txt
+</code></pre>
+<hr>
+<h3 id="usage-demonstration-">Usage Demonstration:</h3>
+<p><img src="../src/demonstration.gif" alt="NtHiM Usage Demonstration"></p>
+<hr>
+<h2 id="examples">Examples</h2>
+<h3 id="single-target">Single Target</h3>
+<p><img src="../src/example1.png" alt="Single Target"></p>
+<h3 id="multiple-targets-using-concurrent-threads">Multiple Targets using Concurrent Threads</h3>
+<p><img src="../src/example2.png" alt="Multiple Targets using Concurrent Threads"></p>
+<hr>
+<h2 id="workflow">Workflow</h2>
+<h3 id="platform-identification">Platform Identification</h3>
+<p><strong>NtHiM</strong> uses the data provided in <strong><a href="https://github.com/EdOverflow/can-i-take-over-xyz">EdOverflow/can-i-take-over-xyz</a></strong> for the platform identification.</p>
+<hr>
+<h2 id="contributions-and-feature-requests">Contributions and Feature Requests</h2>
+<p align="center"> <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"/></a></p>
+<p>If you are interested in contributing in the development of <strong>NtHiM</strong>, you can feel free to create a <strong>Pull Request</strong> with modifications in the original code, or you shall open up a new <strong>issue</strong>, and I will try to include the feature as requested.</p>
+<p>There is no restriction on anyone for contributing to the development of <strong>NtHiM</strong>. If you would like to contribute, you can feel free to do so.</p>
