@@ -2,7 +2,7 @@
 # It is not intended for manual editing.
 [[package]]
 name = "NtHiM"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "ansi_term",
  "clap",

@@ -31,6 +31,17 @@ If you have Cargo installed, you can simply follow the steps below:
 ***
 
 ## Usage
+
+| Flag  | Description                         | Example                                  |
+| ----- | ----------------------------------- | ---------------------------------------- |
+|  -h   | Display help related to usage!      | NtHiM -h                                 |
+|  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
+|  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
+|  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
+|   -V  | Display the version information!    | NtHiM -V                                 |
+
+***
+
 ### Use Case 1 (Single Target):
 
 ```bash
@@ -45,17 +56,14 @@ NtHiM -f hostnames.txt
 
 ***
 
-| Flag  | Description                         | Example                                  |
-| ----- | ----------------------------------- | ---------------------------------------- |
-|  -h   | Display help related to usage!      | NtHiM -h                                 |
-|  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
-|  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
-|  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
-|   -V  | Display the version information!    | NtHiM -V                                 |
+### Usage Demonstration:
+
+![NtHiM Usage Demonstration](src/demonstration.gif)
 
 ***
 
 ## Examples
+
 ### Single Target
 ![Single Target](src/example1.png)
 
