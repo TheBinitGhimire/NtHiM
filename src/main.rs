@@ -1,18 +1,18 @@
+#![allow(non_snake_case, unused_must_use)]
 mod platforms;
 
 use std::{process::exit, string::String};
 use clap::{Arg, App};
+use ansi_term::{Colour};
 
-use futures::{stream, StreamExt};
-use reqwest::Client;
-use tokio;
+use futures::{StreamExt};
 
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 fn main() -> std::io::Result<()> {
 	let args = App::new("NtHiM")
-			.version("0.0.2")
+			.version("0.0.3")
 			.author("Binit Ghimire <binit@WHOISbinit.me>")
 			.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
 			.args(&[
@@ -71,10 +71,10 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 							Ok(text) => {
 								platforms::_platforms(url, text);
 							}
-							Err(_) => println!("There was an error during execution."),
+							Err(_) => println!("[{}]\tAn error occured for [{}].", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
 						}
 					}
-					Err(_) => println!("There was an error during execution."),
+				Err(_) => println!("[{}]\tTry passing {} with HTTP/HTTPS!", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
 				}
 			}
 	})

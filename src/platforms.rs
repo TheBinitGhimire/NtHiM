@@ -1,4 +1,4 @@
-use ansi_term::{Colour, Style};
+use ansi_term::{Colour};
 use serde_derive::Deserialize;
 
 #[derive(Deserialize)]
@@ -70,7 +70,7 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		},
 		{
 			"platform": "Heroku",
-			"content": "No such app"
+			"content": "<title>No such app</title>"
 		},
 		{
 			"platform": "Intercom",
@@ -82,7 +82,7 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		},
 		{
 			"platform": "Kinsta",
-			"content": "No Site For Domain"
+			"content": "You have successfully pointed this domain to Kinsta servers but you haven't added it to any of your sites."
 		},
 		{
 			"platform": "LaunchRock",
@@ -102,11 +102,11 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		},
 		{
 			"platform": "Readme.io",
-			"content": "Project doesnt exist... yet!"
+			"content": "<h2>Project doesnt exist... yet!</h2>"
 		},
 		{
 			"platform": "Shopify",
-			"content": "Sorry, this shop is currently unavailable."
+			"content": "<h1 class=\"tc\">Sorry, this shop is currently unavailable.</h1>"
 		},
 		{
 			"platform": "SmartJobBoard",
@@ -114,15 +114,15 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		},
 		{
 			"platform": "Strikingly",
-			"content": "page not found"
+			"content": "<title>Page not found - Strikingly</title>"
 		},
 		{
 			"platform": "Surge.sh",
-			"content": "project not found"
+			"content": "<h1>project not found</h1>"
 		},
 		{
 			"platform": "Tumblr",
-			"content": "Whatever you were looking for doesn't currently exist at this address"
+			"content": "Whatever you were looking for doesn't currently exist at this address. Unless you were looking for this error page, in which case: Congrats! You totally found it."
 		},
 		{
 			"platform": "Uberflip",
@@ -138,11 +138,11 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		},
 		{
 			"platform": "Webflow",
-			"content": "The page you are looking for doesn't exist or has been moved."
+			"content": "<p class=\"description\">The page you are looking for doesn't exist or has been moved.</p>"
 		},
 		{
 			"platform": "Worksites",
-			"content": "Hello! Sorry, but the website you&rsquo;re looking for doesn&rsquo;t exist."
+			"content": "<p>Hello! Sorry, but the website you&rsquo;re looking for doesn&rsquo;t exist.</p>"
 		}
 		]
 	}"#;
