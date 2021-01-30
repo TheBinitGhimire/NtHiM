@@ -1,16 +1,29 @@
-<h1 align="center" style="font-size:36px;font-weight:bold;">
-        NtHiM
-</h1>
-<h4 align="center">
-    <strong>Powered by BINIT GHIMIRE (<a href='https://twitter.com/WHOISbinit' target="_blank">@WHOISbinit</a>)</strong>
-</h4>
+<!-- NtHiM | Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection! -->
+
 <p align="center">
-    <img src="src/screenshot.png" />
+        <a href="https://github.com/TheBinitGhimire/NtHiM/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/TheBinitGhimire/NtHiM/network/members" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/forks/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/TheBinitGhimire/NtHiM/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        <br />
+        <img src="images/header.png" alt="Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection" title="NtHiM | Now, the Host is Mine!">
+        <br />
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/TheBinitGhimire/NtHiM/releases" target="_blank"><img src="https://img.shields.io/github/downloads/TheBinitGhimire/NtHiM/total.svg?style=for-the-badge&label=GitHub+Downloads" /></a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://crates.io/crates/NtHiM" target="_blank"><img alt="Cargo Installs" src="https://img.shields.io/crates/d/NtHiM?style=for-the-badge&label=Cargo+Installs" /></a>
 </p>
-<h3 align="center"><strong>N<strong>ow, <strong>t</strong>he <strong>H</strong>ost <strong>i</strong>s <strong>M</strong>ine!</h3><hr/>
-<h2 align="center">Super Fast Sub-domain Takeover Detection!</h2>
+
+
+***
+
+
+<h3 align="center"> NtHiM - Super Fast Sub-domain Takeover Detection </h3>
 <p align="center">
-    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" /></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.0.3"><img src="https://img.shields.io/badge/latest-0.0.3-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
+    &nbsp;&nbsp;
+    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" height="36" /></a>
 </p>
 
 
@@ -67,17 +80,17 @@ NtHiM -f hostnames.txt
 
 ### Usage Demonstration:
 
-![NtHiM Usage Demonstration](src/demonstration.gif)
+![NtHiM Usage Demonstration](images/demonstration.gif)
 
 ***
 
 ## Examples
 
 ### Single Target
-![Single Target](src/example1.png)
+![Single Target](images/examples/example1.png)
 
 ### Multiple Targets using Concurrent Threads
-![Multiple Targets using Concurrent Threads](src/example2.png)
+![Multiple Targets using Concurrent Threads](images/examples/example2.png)
 
 ***
 
