@@ -62,9 +62,14 @@ fn fileRead(filepath: String, threads: usize){
 
 #[tokio::main]
 async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
+	let accept_invalid_certs = true;
+	let tls = native_tls::TlsConnector::builder()
 	let fetches = futures::stream::iter(
 		hosts.into_iter().map(|url| {
 			async move {
+				.danger_accept_invalid_certs(accept_invalid_certs)
+    				.build()
+    				.unwrap();
 				match reqwest::get(&url).await {
 					Ok(resp) => {
 						match resp.text().await {
