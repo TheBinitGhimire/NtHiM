@@ -65,7 +65,13 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 	let fetches = futures::stream::iter(
 		hosts.into_iter().map(|url| {
 			async move {
-				match reqwest::get(&url).await {
+				match reqwest::Client::builder()
+					.danger_accept_invalid_certs(true)
+					.build()
+					.unwrap()
+					.get(&url)
+					.send()
+					.await {
 					Ok(resp) => {
 						match resp.text().await {
 							Ok(text) => {
