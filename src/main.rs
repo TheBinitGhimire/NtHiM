@@ -12,7 +12,7 @@ use std::io::{BufRead, BufReader};
 
 fn main() -> std::io::Result<()> {
 	let args = App::new("NtHiM")
-			.version("0.0.3")
+			.version("0.0.4")
 			.author("Binit Ghimire <binit@WHOISbinit.me>")
 			.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
 			.args(&[
@@ -65,13 +65,7 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 	let fetches = futures::stream::iter(
 		hosts.into_iter().map(|url| {
 			async move {
-				match reqwest::Client::builder()
-					.danger_accept_invalid_certs(true)
-					.build()
-					.unwrap()
-					.get(&url)
-					.send()
-					.await {
+				match reqwest::Client::builder().danger_accept_invalid_certs(true).build().unwrap().get(&url).send().await {
 					Ok(resp) => {
 						match resp.text().await {
 							Ok(text) => {
@@ -80,15 +74,16 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 							Err(_) => println!("[{}]\tAn error occured for [{}].", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
 						}
 					}
-				Err(_) => println!("[{}]\tTry passing {} with HTTP/HTTPS!", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
+					Err(_) => println!("[{}]\tTry passing {} with HTTP/HTTPS!", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
 				}
 			}
 	})
 	).buffer_unordered(threads).collect::<Vec<()>>();
 	fetches.await;
-    //let body = res.text().await?;
-    //if body.contains("<p><strong>There isn't a GitHub Pages site here.</strong></p>") {
-		//println!("GitHub Pages Sub-domain Takeover seems possible!");
-	//}
+	/*	In case you want to know how it works, here is a more simple code:
+		let body = res.text().await?;
+		if body.contains("<p><strong>There isn't a GitHub Pages site here.</strong></p>") {
+			println!("GitHub Pages Sub-domain Takeover seems possible!");
+		} */
     Ok(())
 }

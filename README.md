@@ -1,16 +1,16 @@
 <!-- NtHiM | Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection! -->
 
 <p align="center">
-        <a href="https://github.com/TheBinitGhimire/NtHiM/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        <a href="https://github.com/TheBinitGhimire/NtHiM/stargazers" target="_blank"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
         &nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/TheBinitGhimire/NtHiM/network/members" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/forks/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        <a href="https://github.com/TheBinitGhimire/NtHiM/network/members" target="_blank"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
         &nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/TheBinitGhimire/NtHiM/issues" target="_blank"><img alt="GitHub issues" src="https://img.shields.io/github/issues/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
+        <a href="https://github.com/TheBinitGhimire/NtHiM/issues" target="_blank"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/TheBinitGhimire/NtHiM?style=for-the-badge" /></a>
         <br />
         <img src="images/header.png" alt="Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection" title="NtHiM | Now, the Host is Mine!">
         <br />
         &nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/TheBinitGhimire/NtHiM/releases" target="_blank"><img src="https://img.shields.io/github/downloads/TheBinitGhimire/NtHiM/total.svg?style=for-the-badge&label=GitHub+Downloads" /></a>
+        <a href="https://github.com/TheBinitGhimire/NtHiM/releases" target="_blank"><img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/TheBinitGhimire/NtHiM/total.svg?style=for-the-badge&label=GitHub+Downloads" /></a>
         &nbsp;&nbsp;&nbsp;
         <a href="https://crates.io/crates/NtHiM" target="_blank"><img alt="Cargo Installs" src="https://img.shields.io/crates/d/NtHiM?style=for-the-badge&label=Cargo+Installs" /></a>
 </p>
@@ -21,7 +21,7 @@
 
 <h3 align="center"> NtHiM - Super Fast Sub-domain Takeover Detection </h3>
 <p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.0.3"><img src="https://img.shields.io/badge/latest-0.0.3-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.0.4"><img src="https://img.shields.io/badge/latest-0.0.4-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
     &nbsp;&nbsp;
     <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" height="36" /></a>
 </p>
@@ -60,7 +60,7 @@ If you have Cargo installed, you can simply follow the steps below:
 |  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
 |  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
 |  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
-|   -V  | Display the version information!    | NtHiM -V                                 |
+|  -V   | Display the version information!    | NtHiM -V                                 |
 
 ***
 
@@ -110,7 +110,7 @@ Some of your queries might have been answered in one of the existing issues, so 
 
 ## Contributions and Feature Requests
 <p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" /></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" /></a>
 </p>
 
 
