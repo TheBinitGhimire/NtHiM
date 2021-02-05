@@ -145,11 +145,10 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 			"content": "<p>Hello! Sorry, but the website you&rsquo;re looking for doesn&rsquo;t exist.</p>"
 		},
 		{
-			"platform": "Wordpress",
-			"content": "Warning! Domain mapping upgrade for this domain not found. Please log in and go to the Domains Upgrades page of your blog to use this domain."
+			"platform": "WordPress.com",
+			"content": "<title>Error: Domain mapping upgrade for this domain not found</title>"
 	
-		}
-	
+		}	
 		]
 	}"#;
 	let data: Response = serde_json::from_str(_definitions)?;
