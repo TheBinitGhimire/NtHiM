@@ -74,7 +74,7 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 							Err(_) => println!("[{}]\tAn error occured for [{}].", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
 						}
 					}
-					Err(_) => println!("[{}]\tThe host {} appears to be down!", Colour::Green.bold().paint("ERROR"), Colour::White.bold().paint(url)),
+					Err(_) => (),
 				}
 			}
 	})
