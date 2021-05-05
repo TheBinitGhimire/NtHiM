@@ -48,7 +48,7 @@ If you have Cargo installed, you can simply follow the steps below:
 2. Go inside the folder, `cd NtHiM`;
 3. Use the `cargo build` command,
 4. Go inside the newly-created **target** folder, and open the **debug** folder inside it, `cd target/debug`;
-5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on Linux).
+5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on most of the other platforms).
 
 The installation walkthrough for **NtHiM** has been uploaded to YouTube, covering all of these three methods, and you can watch the video here: **[How to Install and Use NtHiM (Now, the Host is Mine!)? Super Fast Sub-domain Takeover Detection!](https://youtu.be/CUTbqFhRjwY)**
 
@@ -62,6 +62,8 @@ The installation walkthrough for **NtHiM** has been uploaded to YouTube, coverin
 |  -t   | Scan a single target!               | NtHiM -t https://example.example.com     |
 |  -f   | Scan a list of targets from a file! | NtHiM -f hostnames.txt                   |
 |  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
+|  -v   | Enable Verbose Mode!				  | NtHiM -v -f hostnames.txt				 |
+|  -o   | Write output to file!				  | NtHiM -f hostnames.txt -o output.txt	 |
 |  -V   | Display the version information!    | NtHiM -V                                 |
 
 ***
