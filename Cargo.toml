@@ -1,17 +1,17 @@
 [package]
 name = "NtHiM"
-version = "0.0.5-R1"
+version = "0.1.0"
 authors = ["Binit Ghimire <thebinitghimire@gmail.com>"]
 edition = "2018"
 license = "MIT"
 categories = ["command-line-utilities"]
 description = "Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!"
-homepage = "https://whoisbinit.me/NtHiM/"
+homepage = "https://github.com/TheBinitGhimire/NtHiM/"
 documentation = "https://github.com/TheBinitGhimire/NtHiM/"
 repository = "https://github.com/TheBinitGhimire/NtHiM/"
 readme = "README.md"
 keywords = ["host-takeover", "subdomain-takeover", "pentesting", "bug-bounty", "red-teaming"]
-exclude = ["docs/*", "_config.yml"]
+exclude = []
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -21,7 +21,6 @@ ansi_term = "0.12.1"
 clap = "3.0.0-beta.2"
 futures = "0.3.12"
 reqwest = "0.10.0"
-serde = "1.0.122"
-serde_derive = "1.0.122"
+serde = { version = "1.0.122", features = ["derive"] }
 serde_json = "1.0.61"
 tokio = { version = "0.2", features = ["full"] }

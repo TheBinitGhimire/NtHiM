@@ -1,18 +1,17 @@
-use ansi_term::{Colour};
-use serde_derive::Deserialize;
+use serde::{Deserialize};
 
 #[derive(Deserialize)]
 struct Response {
-    platforms: Vec<Definition>,
+	platforms: Vec<Definition>,
 }
 
 #[derive(Deserialize)]
 struct Definition {
-    platform: String,
+	platform: String,
 	content: String,
 }
 
-pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
+pub fn _platforms(response: String) -> String {
 	let _definitions = r#"
 	{
 		"platforms": [
@@ -151,12 +150,13 @@ pub fn _platforms(url: String, response: String) -> serde_json::Result<()> {
 		}	
 		]
 	}"#;
-	let data: Response = serde_json::from_str(_definitions)?;
+	let data: Response = serde_json::from_str(_definitions).unwrap();
+	let mut platformName: String = "None".to_string();
 	for platform in data.platforms {
 		if response.contains(&platform.content){
-			println!("[{}]\t{} at {}!", Colour::Red.bold().paint(platform.platform), Colour::White.bold().paint("Possible Sub-domain Takeover"), url);
+			platformName = platform.platform;
+			break
 		}
 	}
-	
-	Ok(())
+	return platformName
 }
