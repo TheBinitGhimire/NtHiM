@@ -1,13 +1,16 @@
 use error_chain::error_chain;
+
 use platform_dirs::AppDirs;
+
 use serde::Deserialize;
+
 use std::fs::{self, File};
 use std::io::Read;
 
 error_chain! {
 	foreign_links {
-		HttpRequest(reqwest::Error);
-		SomeBullCrap(std::io::Error);
+		Reqwest(reqwest::Error);
+		StandardIO(std::io::Error);
 	}
 }
 
@@ -32,16 +35,16 @@ pub fn _cache_signatures(signatures: String) {
 	let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
 	let cache_file_path = app_dirs.cache_dir.join("signatures.json");
 	fs::create_dir_all(&app_dirs.cache_dir).unwrap();
-	fs::write(cache_file_path, signatures).expect("Unable to cache signatures.");
+	fs::write(cache_file_path, signatures).expect("Unable to cache signatures!");
 }
 
 pub fn _get_signatures() -> String {
 	let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
 	let cache_file_path = app_dirs.cache_dir.join("signatures.json");
 	let mut signatures = String::new();
-	let mut f = File::open(cache_file_path).expect("Unable to open cache file.");
+	let mut f = File::open(cache_file_path).expect("Unable to open cache file!");
 	f.read_to_string(&mut signatures)
-		.expect("Unable to read the cache file.");
+		.expect("Unable to read the cache file!");
 	return signatures;
 }
 
