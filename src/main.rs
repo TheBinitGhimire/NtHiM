@@ -45,7 +45,7 @@ fn parse_args() -> ArgMatches {
 				.long("output")
 				.takes_value(true),
 			Arg::new("update")
-				.about("Update signature cache.")
+				.about("Update signature cache!")
 				.short('u')
 				.long("update")
 				.takes_value(false),
@@ -58,7 +58,7 @@ fn main() -> std::io::Result<()> {
 	let cache_file_path = app_dirs.cache_dir.join("signatures.json");
 	let args = parse_args();
 	if !cache_file_path.exists() || args.is_present("update") {
-		println!("Updating signature cache, do wait till it get cached.");
+		println!("Updating signature cache, do wait till it gets cached!");
 		let signatures = platforms::_get_signatures_from_repo().unwrap();
 		platforms::_cache_signatures(signatures);
 	}
@@ -169,10 +169,12 @@ async fn takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
 	.buffer_unordered(threads)
 	.collect::<Vec<()>>();
 	fetches.await;
-	/*	In case you want to know how it works, here is a more simpler code without any chik-boom:
-	let body = res.text().await?;
-	if body.contains("<p><strong>There isn't a GitHub Pages site here.</strong></p>") {
-		println!("GitHub Pages Sub-domain Takeover seems possible!");
-	} */
+	/*
+		In case you want to know how it works, here is a more simpler code explaining the overall workflow:
+		let body = res.text().await?;
+		if body.contains("<p><strong>There isn't a GitHub Pages site here.</strong></p>") {
+			println!("GitHub Pages Sub-domain Takeover seems possible!");
+		}
+	*/
 	Ok(())
 }
