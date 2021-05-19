@@ -21,7 +21,7 @@
 
 <h3 align="center"> NtHiM - Super Fast Sub-domain Takeover Detection </h3>
 <p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.1.0"><img src="https://img.shields.io/badge/latest-0.1.0-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.1.1"><img src="https://img.shields.io/badge/latest-0.1.1-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
     &nbsp;&nbsp;
     <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" height="36" /></a>
 </p>
@@ -64,6 +64,7 @@ The installation walkthrough for **NtHiM** has been uploaded to YouTube, coverin
 |  -c   | Number of Concurrent Threads!       | NtHiM -c 100 -f hostnames.txt            |
 |  -v   | Enable Verbose Mode!				  | NtHiM -v -f hostnames.txt				 |
 |  -o   | Write output to file!				  | NtHiM -f hostnames.txt -o output.txt	 |
+|  -u   | Update signature cache!             | NtHiM -u                                 |
 |  -V   | Display the version information!    | NtHiM -V                                 |
 
 ***
