@@ -1,18 +1,10 @@
-use error_chain::error_chain;
-
 use platform_dirs::AppDirs;
 
 use serde::Deserialize;
 
+use std::error::Error;
 use std::fs::{self, File};
 use std::io::Read;
-
-error_chain! {
-	foreign_links {
-		Reqwest(reqwest::Error);
-		StandardIO(std::io::Error);
-	}
-}
 
 #[derive(Deserialize)]
 struct Response {
@@ -25,7 +17,7 @@ struct Definition {
 	content: String,
 }
 
-pub fn _get_signatures_from_repo() -> Result<String> {
+pub fn _get_signatures_from_repo() -> Result<String, Box<dyn Error>> {
 	let url = "https://raw.githubusercontent.com/Pentester-Nepal/Subdomain-Takeover-Signatures/main/signatures.json";
 	let resp = reqwest::blocking::get(url)?.text()?;
 	Ok(resp)
@@ -42,8 +34,8 @@ pub fn _get_signatures() -> String {
 	let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
 	let cache_file_path = app_dirs.cache_dir.join("signatures.json");
 	let mut signatures = String::new();
-	let mut f = File::open(cache_file_path).expect("Unable to open cache file!");
-	f.read_to_string(&mut signatures)
+	let mut cacheFile = File::open(cache_file_path).expect("Unable to open cache file!");
+	cacheFile.read_to_string(&mut signatures)
 		.expect("Unable to read the cache file!");
 	return signatures;
 }
