@@ -50,6 +50,8 @@ If you have Cargo installed, you can simply follow the steps below:
 4. Go inside the newly-created **target** folder, and open the **debug** folder inside it, `cd target/debug`;
 5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on most of the other platforms).
 
+Before doing a manual build of NtHiM or installing through **Crates.io** with **`cargo`**, you might need to have OpenSSL installed in your system. Sometimes if you get an error during the manual building process, then the odds of the reason being due to OpenSSL are high. Please check out the [issue #1](https://github.com/TheBinitGhimire/NtHiM/issues/1) to figure out a solution for this issue.
+
 The installation walkthrough for **NtHiM** has been uploaded to YouTube, covering all of these three methods, and you can watch the video here: **[How to Install and Use NtHiM (Now, the Host is Mine!)? Super Fast Sub-domain Takeover Detection!](https://youtu.be/CUTbqFhRjwY)**
 
 ***
