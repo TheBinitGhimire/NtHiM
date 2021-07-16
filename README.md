@@ -23,7 +23,7 @@
 <p align="center">
     <a href="https://github.com/TheBinitGhimire/NtHiM/releases/tag/0.1.2"><img src="https://img.shields.io/badge/latest-0.1.2-blue?style=for-the-badge&label=Latest+Release" height="36" /></a>
     &nbsp;&nbsp;
-    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://ForTheBadge.com/images/badges/made-with-rust.svg" height="36" /></a>
+    <a href="https://www.rust-lang.org/" target="_blank"><img src="https://forthebadge.com/images/badges/made-with-rust.svg" height="36" /></a>
 </p>
 
 
