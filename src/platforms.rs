@@ -18,7 +18,7 @@ struct Definition {
 }
 
 pub fn _get_signatures_from_repo() -> Result<String, Box<dyn Error>> {
-	let url = "https://raw.githubusercontent.com/Pentester-Nepal/Subdomain-Takeover-Signatures/main/signatures.json";
+	let url = "https://git.io/signatures_json";
 	let resp = reqwest::blocking::get(url)?.text()?;
 	Ok(resp)
 }
