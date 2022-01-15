@@ -5,7 +5,7 @@ use std::io::prelude::*;
 use std::io::{BufRead, BufReader, BufWriter};
 
 pub fn _fileRead(filepath: String, threads: usize) {
-	let file = File::open(filepath).unwrap();
+	let file = File::open(filepath).expect("Unable to open file!");
 	let reader = BufReader::new(file);
 	let mut hosts = Vec::<String>::new();
 	for line in reader.lines() {
