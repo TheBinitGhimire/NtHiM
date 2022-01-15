@@ -2,6 +2,7 @@ use super::{arguments::_parse_args, io::_writeOutput, platforms::_platforms};
 use ansi_term::Colour;
 use futures::{stream::iter, StreamExt};
 use reqwest::Client;
+use std::time::Duration;
 use tokio;
 
 #[tokio::main]
@@ -11,8 +12,19 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
         .build()
         .unwrap();
     let args = &_parse_args();
+    let _timeout: u64 = args
+		.value_of("timeout")
+        .unwrap_or("5")
+		.parse::<u64>()
+		.unwrap_or(5);
+
     let fetches = iter(hosts.into_iter().map(|url| async move {
-        match client.get(&url).send().await {
+        match client
+            .get(&url)
+            .timeout(Duration::from_secs(_timeout))
+            .send()
+            .await
+        {
             Ok(resp) => match resp.text().await {
                 Ok(text) => {
                     let platformName = _platforms(text);
