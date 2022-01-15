@@ -33,7 +33,7 @@ fn main() -> std::io::Result<()> {
 		.value_of("threads")
 		.unwrap_or("10")
 		.parse::<usize>()
-		.unwrap();
+		.unwrap_or(10);
 	if args.is_present("file") && args.is_present("target") {
 		println!("Please provide either a single hostname or a file containing list of hostnames rather than both!");
 		exit(1);
