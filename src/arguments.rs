@@ -1,7 +1,7 @@
 use clap::{App, AppSettings::ArgRequiredElseHelp, Arg, ArgMatches};
 
 pub fn _parse_args() -> ArgMatches {
-	App::new("NtHiM")
+    App::new("NtHiM")
 		.version("0.1.3")
 		.author("Binit Ghimire <thebinitghimire@gmail.com>, Captain Nick Lucifer* <naryal2580@gmail.com>")
 		.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
@@ -18,9 +18,14 @@ pub fn _parse_args() -> ArgMatches {
 				.long("target")
 				.takes_value(true),
 			Arg::new("threads")
-				.about("Number of Concurrent Threads!")
+				.about("Number of Concurrent Threads! (default: 10)")
 				.short('c')
 				.long("threads")
+				.takes_value(true),
+			Arg::new("timeout")
+				.about("Timeout for connections (in seconds)! (default: 5)")
+				.short('s')
+				.long("timeout")
 				.takes_value(true),
 			Arg::new("verbose")
 				.about("Enable Verbose Mode!")
