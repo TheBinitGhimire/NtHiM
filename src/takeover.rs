@@ -1,9 +1,17 @@
 use super::{arguments::_parse_args, io::_writeOutput, platforms::_platforms};
 use ansi_term::Colour;
 use futures::{stream::iter, StreamExt};
-use reqwest::Client;
+use http::Uri;
+use reqwest::{Client, Url};
 use std::time::Duration;
 use tokio;
+
+fn preParser(url: &Url) -> Uri {
+    match url.as_str().parse() {
+        Ok(u) => u,
+        Err(_) => Url::parse("https://NtHiM.InvalidURL/").unwrap().as_str().parse().unwrap()
+    }
+}
 
 #[tokio::main]
 pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()> {
@@ -20,7 +28,7 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
 
     let fetches = iter(hosts.into_iter().map(|url| async move {
         match client
-            .get(&url)
+            .get(preParser(&Url::parse(&url).unwrap()).to_string())
             .timeout(Duration::from_secs(_timeout))
             .send()
             .await
