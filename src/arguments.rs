@@ -8,37 +8,37 @@ pub fn _parse_args() -> ArgMatches {
 		.setting(ArgRequiredElseHelp)
 		.args(&[
 			Arg::new("file")
-				.about("List of Hostnames separated with new line (\\n)!")
+				.help("List of Hostnames separated with new line (\\n)!")
 				.short('f')
 				.long("file")
 				.takes_value(true),
 			Arg::new("target")
-				.about("Hostname with the protocol defined!")
+				.help("Hostname with the protocol defined!")
 				.short('t')
 				.long("target")
 				.takes_value(true),
 			Arg::new("threads")
-				.about("Number of Concurrent Threads! (default: 10)")
+				.help("Number of Concurrent Threads! (default: 10)")
 				.short('c')
 				.long("threads")
 				.takes_value(true),
 			Arg::new("timeout")
-				.about("Timeout for connections (in seconds)! (default: 5)")
+				.help("Timeout for connections (in seconds)! (default: 5)")
 				.short('s')
 				.long("timeout")
 				.takes_value(true),
 			Arg::new("verbose")
-				.about("Enable Verbose Mode!")
+				.help("Enable Verbose Mode!")
 				.short('v')
 				.long("verbose")
 				.takes_value(false),
 			Arg::new("output")
-				.about("Write output to file!")
+				.help("Write output to file!")
 				.short('o')
 				.long("output")
 				.takes_value(true),
 			Arg::new("update")
-				.about("Update signature cache!")
+				.help("Update signature cache!")
 				.short('u')
 				.long("update")
 				.takes_value(false),

@@ -18,7 +18,7 @@ maintenance = { status = "actively-developed" }
 
 [dependencies]
 ansi_term = "0.12.1"
-clap = "3.0.0-beta.2"
+clap = "3.0.10"
 futures = { version = "0.3.15" }
 http = { version = "0.2.6" }
 reqwest = { version = "0.11.8", features = ["blocking"] }
