@@ -9,7 +9,11 @@ use tokio;
 fn preParser(url: &Url) -> Uri {
     match url.as_str().parse() {
         Ok(u) => u,
-        Err(_) => Url::parse("https://NtHiM.InvalidURL/").unwrap().as_str().parse().unwrap()
+        Err(_) => Url::parse("https://NtHiM.InvalidURL/")
+            .unwrap()
+            .as_str()
+            .parse()
+            .unwrap(),
     }
 }
 
