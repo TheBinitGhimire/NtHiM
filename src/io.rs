@@ -7,7 +7,10 @@ pub fn _fileRead(filepath: String) -> Vec<String> {
     let reader = BufReader::new(file);
     let mut hosts = Vec::<String>::new();
     for line in reader.lines() {
-        hosts.push(line.unwrap());
+        match line {
+            Ok(line) => hosts.push(line),
+            Err(_) => ()
+        }
     }
     return hosts;
 }
