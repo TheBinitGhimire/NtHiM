@@ -28,7 +28,7 @@ jobs:
             armv7-linux-androideabi,
             i686-linux-android,
             x86_64-linux-android,
-            i686-pc-windows-gnu,
+            # i686-pc-windows-gnu,
             x86_64-pc-windows-gnu,
           ]
         include:
@@ -92,10 +92,10 @@ jobs:
             target: x86_64-linux-android
             name: x86_64-NtHiM-linux-android
             path: target/x86_64-linux-android/release/NtHiM
-          - type: i686-pc-windows-gnu
-            target: i686-pc-windows-gnu
-            name: i686-NtHiM-windows-gnu
-            path: target/i686-pc-windows-gnu/release/NtHiM.exe
+          # - type: i686-pc-windows-gnu
+          #   target: i686-pc-windows-gnu
+          #   name: i686-NtHiM-windows-gnu
+          #   path: target/i686-pc-windows-gnu/release/NtHiM.exe
           - type: x86_64-pc-windows-gnu
             target: x86_64-pc-windows-gnu
             name: x86_64-NtHiM-windows-gnu
