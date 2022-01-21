@@ -38,7 +38,7 @@ fn main() -> std::io::Result<()> {
         println!("Please provide either a single hostname or a file containing list of hostnames rather than both!");
         exit(1);
     } else {
-		let mut hosts = Vec::<String>::new();
+        let mut hosts = Vec::<String>::new();
         if args.is_present("file") {
             let hostnames = args.value_of("file").unwrap_or("hostnames.txt");
             hosts = _fileRead(hostnames.to_string());
@@ -48,6 +48,6 @@ fn main() -> std::io::Result<()> {
         }
         _takeover(hosts, _threads);
     }
-    
+
     Ok(())
 }
