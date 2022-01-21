@@ -1,4 +1,4 @@
-use super::{arguments::_parse_args, io::_writeOutput, platforms::_platforms};
+use super::{arguments::_parse_args, io::_writeOutput, platforms::_findPlatformName};
 use ansi_term::Colour;
 use futures::{stream::iter, StreamExt};
 use http::Uri;
@@ -35,7 +35,7 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
         {
             Ok(resp) => match resp.text().await {
                 Ok(text) => {
-                    let platformName = _platforms(text);
+                    let platformName = _findPlatformName(text);
                     match platformName == "None" {
                         true => {
                             if args.is_present("verbose") {

@@ -6,17 +6,48 @@ use std::error::Error;
 use std::fmt;
 use std::fs::{self, File};
 use std::io::Read;
+use std::sync::Once;
 
-#[derive(Deserialize)]
-struct Response {
+#[derive(Deserialize, Clone)]
+pub struct Response {
     platforms: Vec<Definition>,
 }
 
-#[derive(Deserialize)]
-struct Definition {
+#[derive(Deserialize, Clone)]
+pub struct Definition {
     platform: String,
     #[serde(deserialize_with = "deserializeStringOrSequence")]
     content: Vec<String>,
+}
+
+impl Definition {
+    pub const fn new() -> Self {
+        Definition {
+            platform: String::new(),
+            content: Vec::new(),
+        }
+    }
+}
+
+impl Response {
+    pub const fn new() -> Self {
+        Response {
+            platforms: Vec::new(),
+        }
+    }
+
+    pub fn _getPlatformName(self, response: String) -> String {
+        let mut platformName: String = "None".to_string();
+        for platform in self.platforms {
+            for respText in platform.content {
+                if response.contains(&respText) {
+                    platformName = platform.platform;
+                    break;
+                }
+            }
+        }
+        return platformName;
+    }
 }
 
 fn deserializeStringOrSequence<'de, D>(deserializer: D) -> Result<Vec<String>, D::Error>
@@ -74,17 +105,20 @@ pub fn _get_signatures() -> String {
     return signatures;
 }
 
-pub fn _platforms(response: String) -> String {
+pub fn _findPlatformName(responseText: String) -> String {
+    static JUST: Once = Once::new();
+    static mut LIST: Response = Response::new();
+
+    unsafe {
+        JUST.call_once(|| {
+            LIST = _platforms();
+        });
+        LIST.clone()._getPlatformName(responseText)
+    }
+}
+
+pub fn _platforms() -> Response {
     let _definitions = _get_signatures();
     let data: Response = serde_json::from_str(&_definitions).unwrap();
-    let mut platformName: String = "None".to_string();
-    for platform in data.platforms {
-        for respText in platform.content {
-            if response.contains(&respText) {
-                platformName = platform.platform;
-                break;
-            }
-        }
-    }
-    return platformName;
+    return data;
 }
