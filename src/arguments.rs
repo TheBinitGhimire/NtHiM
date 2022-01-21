@@ -2,7 +2,7 @@ use clap::{App, AppSettings::ArgRequiredElseHelp, Arg, ArgMatches};
 
 pub fn _parse_args() -> ArgMatches {
     App::new("NtHiM")
-		.version("0.1.3")
+		.version("0.1.4")
 		.author("Binit Ghimire <thebinitghimire@gmail.com>, Captain Nick Lucifer* <naryal2580@gmail.com>")
 		.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
 		.setting(ArgRequiredElseHelp)

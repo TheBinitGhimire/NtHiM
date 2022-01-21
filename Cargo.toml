@@ -1,6 +1,6 @@
 [package]
 name = "NtHiM"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Binit Ghimire <thebinitghimire@gmail.com>", "Captain Nick Lucifer* <naryal2580@gmail.com>"]
 edition = "2018"
 license = "MIT"
