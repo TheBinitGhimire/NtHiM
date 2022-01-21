@@ -1,17 +1,15 @@
-use super::takeover::_takeover;
-
 use std::fs::{File, OpenOptions};
 use std::io::prelude::*;
 use std::io::{BufRead, BufReader, BufWriter};
 
-pub fn _fileRead(filepath: String, threads: usize) {
+pub fn _fileRead(filepath: String) -> Vec<String> {
 	let file = File::open(filepath).expect("Unable to open file!");
 	let reader = BufReader::new(file);
 	let mut hosts = Vec::<String>::new();
 	for line in reader.lines() {
 		hosts.push(line.unwrap());
 	}
-	_takeover(hosts, threads);
+	return hosts;
 }
 
 pub fn _writeOutput(fileName: String, outputData: String) {
