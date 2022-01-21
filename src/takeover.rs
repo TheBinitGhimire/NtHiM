@@ -32,7 +32,12 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
 
     let fetches = iter(hosts.into_iter().map(|url| async move {
         match client
-            .get(preParser(&Url::parse(&url).unwrap()).to_string())
+            .get(
+                preParser(
+                    &Url::parse(&url).unwrap_or(Url::parse("https://NtHiM.InvalidURL/").unwrap()),
+                )
+                .to_string(),
+            )
             .timeout(Duration::from_secs(_timeout))
             .send()
             .await
