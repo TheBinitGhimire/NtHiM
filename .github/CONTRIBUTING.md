@@ -20,8 +20,8 @@ Also, please note that we have a [Contributor Covenant Code of Conduct](CODE_OF_
 
 We follow our own unique versioning schema for **NtHiM**.
 
-1. **MAJOR**: `0.*.0` (_`v0.*.0`_)
-2. **MINOR**: `0.0.*` (_`v0.0.*`_)
+1. **MAJOR** Release (_M_): `0.M.0` (_`v0.M.0`_)
+2. **MINOR** Release (_m_): `0.M.m` (_`v0.M.m`_)
 
 ### Examples
 
