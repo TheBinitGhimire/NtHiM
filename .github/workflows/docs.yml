@@ -1,0 +1,39 @@
+name: Deploy docs!
+
+on:
+  push:
+    branches: [ docs ]
+
+jobs:
+  docs:
+    name: NtHiM Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install mdBook!
+        run: |
+          mkdir mdBook
+          curl -s https://api.github.com/repos/rust-lang/mdBook/releases/latest | sed -n 's/.*"\(.*linux-gnu.tar.gz\)",.*/\1/p' | xargs -I {} -n1 curl -Lf https://github.com/rust-lang/mdBook/releases/latest/download/{} | tar -xz --directory=./mdBook
+          echo "`pwd`/mdBook" >> $GITHUB_PATH
+
+      - name: Build mdBook!
+        run: |
+          git checkout docs
+          mdbook build
+          mv book ${{ runner.temp }}
+          
+      - name: Deploy to GitHub!
+        run: |
+          cd ${{ runner.temp }}/book
+          git init
+          git config user.name "NtHiM Docs Deployer"
+          git config user.email ""
+          git add . .nojekyll
+          git commit -m "Deploy $GITHUB_REF $GITHUB_SHA to gh-pages!"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git push --force --set-upstream origin master:gh-pages
+
