@@ -138,7 +138,7 @@ Some of your queries might have been answered in one of the existing issues, so 
 
 ## Contributions and Feature Requests
 <p align="center">
-    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" /></a>
+    <a href="https://github.com/TheBinitGhimire/NtHiM/pulls"><img src="https://img.shields.io/badge/Pull%20Requests-welcome-brightgreen.svg?style=for-the-badge" /></a>
 </p>
 
 
@@ -153,3 +153,9 @@ There is no restriction on anyone for contributing to the development of **NtHiM
 ## Code of Conduct
 
 Our Code of Conduct is available at [Contributor Covenant Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
+***
+
+## License
+
+[**NtHiM**](https://github.com/TheBinitGhimire/NtHiM) is licensed under the [MIT License](https://github.com/TheBinitGhimire/NtHiM/blob/main/LICENSE).
