@@ -6,4 +6,10 @@ src = "src"
 title = "NtHiM Documentation"
 description = "This guide consists of documentations for users and developers using or contributing to NtHiM (Now, the Host is Mine!)."
 
+[rust]
+edition = "2021"
 
+[output.html]
+site-url = "/NtHiM/"
+git-repository-url = "https://github.com/TheBinitGhimire/NtHiM/tree/docs"
+edit-url-template = "https://github.com/TheBinitGhimire/NtHiM/edit/docs/{path}"
