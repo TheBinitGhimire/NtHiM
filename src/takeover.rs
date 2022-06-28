@@ -45,28 +45,25 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
             Ok(resp) => match resp.text().await {
                 Ok(text) => {
                     let platformName = _findPlatformName(text);
-                    match platformName == "None" {
-                        true => {
-                            if args.is_present("verbose") {
-                                println!(
-                                    "[{}] {}!",
-                                    Colour::Blue.bold().paint("Not Vulnerable"),
-                                    url
-                                );
-                            }
-                        }
-                        _ => {
+                    if let true = platformName == "None" {
+                        if args.is_present("verbose") {
                             println!(
-                                "[{}]\t{} at {}!",
-                                Colour::Red.bold().paint(&platformName),
-                                Colour::White.bold().paint("Possible Sub-domain Takeover"),
+                                "[{}] {}!",
+                                Colour::Blue.bold().paint("Not Vulnerable"),
                                 url
                             );
-                            if args.is_present("output") {
-                                let outputData = format!("[{}] {}\n", platformName, url);
-                                let fileName = args.value_of("output").unwrap();
-                                _writeOutput(fileName.to_string(), outputData);
-                            }
+                        }
+                    } else {
+                        println!(
+                            "[{}]\t{} at {}!",
+                            Colour::Red.bold().paint(&platformName),
+                            Colour::White.bold().paint("Possible Sub-domain Takeover"),
+                            url
+                        );
+                        if args.is_present("output") {
+                            let outputData = format!("[{}] {}\n", platformName, url);
+                            let fileName = args.value_of("output").unwrap();
+                            _writeOutput(fileName.to_string(), outputData);
                         }
                     }
                 }
