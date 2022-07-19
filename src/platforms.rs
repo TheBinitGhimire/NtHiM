@@ -8,6 +8,8 @@ use std::fs::{self, File};
 use std::io::Read;
 use std::sync::Once;
 
+use crate::PLATFORMS_PATH;
+
 #[derive(Deserialize, Clone)]
 pub struct Response {
     platforms: Vec<Definition>,
@@ -94,15 +96,25 @@ pub fn _cache_signatures(signatures: String) {
     fs::write(cache_file_path, signatures).expect("Unable to cache signatures!");
 }
 
+// TODO: Using custom PATH here too, controlled via an optional argument.
 pub fn _get_signatures() -> String {
-    let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
-    let cache_file_path = app_dirs.cache_dir.join("signatures.json");
     let mut signatures = String::new();
-    let mut cacheFile = File::open(cache_file_path).expect("Unable to open cache file!");
-    cacheFile
-        .read_to_string(&mut signatures)
-        .expect("Unable to read the cache file!");
-    return signatures;
+    unsafe {
+        if PLATFORMS_PATH != "" {
+            let mut sig_file = File::open(PLATFORMS_PATH.as_str()).expect("Unable to open signatures file!");
+            sig_file
+                .read_to_string(&mut signatures)
+                .expect("Unable to read the signatures file!");
+        } else {
+            let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
+            let cache_path = app_dirs.cache_dir.join("signatures.json");
+            let mut cache_file = File::open(cache_path).expect("Unable to open cache file!");
+            cache_file
+                .read_to_string(&mut signatures)
+                .expect("Unable to read the cache file!");
+        }
+        return signatures;
+    }
 }
 
 pub fn _findPlatformName(responseText: String) -> String {

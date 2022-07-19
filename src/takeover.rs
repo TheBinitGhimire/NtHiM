@@ -49,7 +49,7 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
                         true => {
                             if args.is_present("verbose") {
                                 println!(
-                                    "[{}] {}!",
+                                    "[{}] {}",
                                     Colour::Blue.bold().paint("Not Vulnerable"),
                                     url
                                 );
@@ -57,7 +57,7 @@ pub async fn _takeover(hosts: Vec<String>, threads: usize) -> std::io::Result<()
                         }
                         _ => {
                             println!(
-                                "[{}]\t{} at {}!",
+                                "[{}]\t{} at {}",
                                 Colour::Red.bold().paint(&platformName),
                                 Colour::White.bold().paint("Possible Sub-domain Takeover"),
                                 url

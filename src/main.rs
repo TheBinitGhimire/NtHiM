@@ -13,6 +13,8 @@ use platform_dirs::AppDirs;
 use std::fs::remove_file;
 use std::{path::Path, process::exit, string::String};
 
+static mut PLATFORMS_PATH: String = String::new();
+
 fn main() -> std::io::Result<()> {
     let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
     let cache_file_path = app_dirs.cache_dir.join("signatures.json");
@@ -45,6 +47,16 @@ fn main() -> std::io::Result<()> {
         } else if args.is_present("target") {
             let _target = args.value_of("target").unwrap();
             hosts.push(_target.to_string());
+        }
+        if args.is_present("platforms") {
+            unsafe {
+                let platforms_path_from_arg = args.value_of("platforms").unwrap().clone();
+                if !Path::new(&platforms_path_from_arg).exists() {
+                    println!("Passed platforms file('{}') does not exist!", &platforms_path_from_arg);
+                    exit(1);
+                }
+                PLATFORMS_PATH = platforms_path_from_arg.to_string();
+            }
         }
         _takeover(hosts, _threads);
     }

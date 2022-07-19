@@ -1,7 +1,7 @@
 [package]
 name = "NtHiM"
-version = "0.1.4"
-authors = ["Binit Ghimire <thebinitghimire@gmail.com>", "Captain Nick Lucifer* <naryal2580@gmail.com>"]
+version = "0.2.4"
+authors = ["Late Binit Ghimire <thebinitghimire@gmail.com>", "Captain Nick Lucifer* <naryal2580@gmail.com>"]
 edition = "2018"
 license = "MIT"
 categories = ["command-line-utilities"]

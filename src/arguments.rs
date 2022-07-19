@@ -2,8 +2,8 @@ use clap::{App, AppSettings::ArgRequiredElseHelp, Arg, ArgMatches};
 
 pub fn _parse_args() -> ArgMatches {
     App::new("NtHiM")
-		.version("0.1.4")
-		.author("Binit Ghimire <thebinitghimire@gmail.com>, Captain Nick Lucifer* <naryal2580@gmail.com>")
+		.version("0.2.4")
+		.author("Late Binit Ghimire <thebinitghimire@gmail.com>, Captain Nick Lucifer* <naryal2580@gmail.com>")
 		.about("Now, the Host is Mine! - Super Fast Sub-domain Takeover Detection!")
 		.setting(ArgRequiredElseHelp)
 		.args(&[
@@ -16,6 +16,11 @@ pub fn _parse_args() -> ArgMatches {
 				.help("Hostname with the protocol defined!")
 				.short('t')
 				.long("target")
+				.takes_value(true),
+			Arg::new("platforms")
+				.help("Path to custom signatures.json/platforms.json file.")
+				.short('p')
+				.long("platforms")
 				.takes_value(true),
 			Arg::new("threads")
 				.help("Number of Concurrent Threads! (default: 10)")
