@@ -163,3 +163,6 @@ Our Code of Conduct is available at [Contributor Covenant Code of Conduct](.gith
 ## License
 
 [**NtH1M**](https://github.com/c4p-n1ck/NtH1M) is licensed under the [MIT License](https://github.com/c4p-n1ck/NtH1M/blob/main/LICENSE).
+
+
+## Rest In Peace, Internet Hero - Binit Ghimire
