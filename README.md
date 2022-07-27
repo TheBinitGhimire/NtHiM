@@ -75,9 +75,9 @@ The installation walkthrough for **NtHiM** has been uploaded to YouTube, coverin
 ### Method 4: Using makepkg
 If you are on arch/any arch based distro that uses pacman then you can use makepkg to install **NtHiM**
 ```
-git clone --depth=1 https://github.com/Iyamnabeen/NtHiM
+git clone --depth=1 https://github.com/TheBinitGhimire/NtHiM
 cd NtHiM
-mzkepkg -si
+makepkg -si
 ```
 
 ***
