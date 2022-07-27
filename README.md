@@ -48,14 +48,6 @@ The pre-compiled binaries for different systems are available in the [**Releases
 ### Method 2: Using Crates.io
 **NtHiM** is available on **[Crates.io](https://crates.io/crates/NtHiM)**. So, if you have Rust installed on your system, you can simply install **NtHiM** with the following command:
 
-### Method 1: Using makepkg
-If you are on arch/any arch based distro that uses pacman then you can use makepkg to install **NtHiM**
-```
-git clone --depth=1 https://github.com/Iyamnabeen/NtHiM
-cd NtHiM
-mzkepkg -si
-```
-
 ```bash
 cargo install NtHiM
 ```
@@ -73,6 +65,14 @@ If you have Cargo installed, you can simply follow the steps below:
 5. You will find **NtHiM.exe** (on Microsoft Windows) or **NtHiM** binary (on most of the other platforms).
 
 If you would like to get a release binary for **NtHiM**, you can use the **`--release`** flag in **Step 3**, and go to the **release** folder (i.e. `cd target/release`) instead in **Step 4**.
+
+### Method 4: Using makepkg
+If you are on arch/any arch based distro that uses pacman then you can use makepkg to install **NtHiM**
+```
+git clone --depth=1 https://github.com/Iyamnabeen/NtHiM
+cd NtHiM
+mzkepkg -si
+```
 
 **For older versions of NtHiM as well as some infrequently used or older platforms or system architectures:**
 Before doing a manual build of NtHiM or installing through **Crates.io** with **`cargo`**, you might need to have OpenSSL installed in your system. Sometimes if you get an error during the manual building process, then the odds of the error taking place due to OpenSSL are high. Please check out the [issue #1](https://github.com/TheBinitGhimire/NtHiM/issues/1) to figure out a solution for this issue.
