@@ -48,6 +48,14 @@ The pre-compiled binaries for different systems are available in the [**Releases
 ### Method 2: Using Crates.io
 **NtHiM** is available on **[Crates.io](https://crates.io/crates/NtHiM)**. So, if you have Rust installed on your system, you can simply install **NtHiM** with the following command:
 
+### Method 1: Using makepkg
+If you are on arch/any arch based distro that uses pacman then you can use makepkg to install **NtHiM**
+```
+git clone --depth=1 https://github.com/Iyamnabeen/NtHiM
+cd NtHiM
+mzkepkg -si
+```
+
 ```bash
 cargo install NtHiM
 ```
