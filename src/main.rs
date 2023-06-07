@@ -42,6 +42,9 @@ fn main() -> std::io::Result<()> {
         let hostnames = args.value_of("file").unwrap_or("hostnames.txt");
         hosts = _fileRead(hostnames.to_string());
     } else if args.is_present("target") {
+        let _target = args.value_of("target").unwrap();
+        hosts.push(_target.to_string());
+    } else if args.is_present("stdin"){
         let stdin = std::io::stdin();
         for line in stdin.lock().lines() {
             if let Ok(hostname) = line {
