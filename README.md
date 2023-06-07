@@ -81,6 +81,7 @@ The installation walkthrough for **NtHiM** has been uploaded to YouTube, coverin
 | -h   | Display help related to usage!        | NtHiM -h                             |
 | -t   | Scan a single target!                 | NtHiM -t https://example.example.com |
 | -f   | Scan a list of targets from a file!   | NtHiM -f hostnames.txt               |
+| --stdin | Pass a list of targets via STDIN   | cat hostnames.txt | NtHiM --stdin    |
 | -c   | Number of Concurrent Threads!         | NtHiM -c 100 -f hostnames.txt        |
 | -s   | Timeout for connections (in seconds)! | NtHiM -s 4 -f hostnames.txt          |
 | -v   | Enable Verbose Mode!                  | NtHiM -v -f hostnames.txt            |
@@ -102,6 +103,12 @@ NtHiM -t https://example.example.com
 
 ```bash
 NtHiM -f hostnames.txt
+```
+
+### Use Case 3 (Multiple Targets via STDIN):
+
+```bash
+cat hostnames.txt | NtHiM --stdin
 ```
 
 ***
