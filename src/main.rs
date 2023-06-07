@@ -61,7 +61,6 @@ fn main() -> std::io::Result<()> {
         println!("Please provide either a single hostname or a file containing a list of hostnames via STDIN.");
         exit(1);
     }
-    }
 
     Ok(())
 }
