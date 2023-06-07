@@ -11,7 +11,7 @@ use takeover::_takeover;
 
 use platform_dirs::AppDirs;
 use std::fs::remove_file;
-use std::{path::Path, process::exit, string::String};
+use std::{io::BufRead, path::Path, process::exit, string::String};
 
 fn main() -> std::io::Result<()> {
     let app_dirs = AppDirs::new(Some("NtHiM"), true).unwrap();
@@ -45,8 +45,20 @@ fn main() -> std::io::Result<()> {
         } else if args.is_present("target") {
             let _target = args.value_of("target").unwrap();
             hosts.push(_target.to_string());
+        } else {
+            let stdin = std::io::stdin();
+            for line in stdin.lock().lines() {
+                if let Ok(hostname) = line {
+                    hosts.push(hostname.trim().to_string());
+                }
+            }
         }
-        _takeover(hosts, _threads);
+        if hosts.is_empty() {
+            println!("No hosts provided. Exiting...");
+            exit(0);
+        } else {
+            _takeover(hosts, _threads);
+        }
     }
 
     Ok(())
