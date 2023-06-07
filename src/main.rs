@@ -53,7 +53,7 @@ fn main() -> std::io::Result<()> {
         }
     }
 
-    if args.is_present("file") || args.is_present("target") {
+    if args.is_present("file") || args.is_present("target") || args.is_present("stdin") {
         if hosts.is_empty() {
             println!("No hosts provided. Exiting...");
             exit(0);
