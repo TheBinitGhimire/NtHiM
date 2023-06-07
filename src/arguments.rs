@@ -2,7 +2,7 @@ use clap::{App, AppSettings::ArgRequiredElseHelp, Arg, ArgMatches};
 
 pub fn _parse_args() -> ArgMatches {
     let stdin_arg = Arg::new("stdin")
-        .about("Read hosts from STDIN")
+        .help("Read hosts from STDIN")
         .long("stdin");
 
     App::new("NtHiM")
